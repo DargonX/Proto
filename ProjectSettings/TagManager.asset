@@ -13,8 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - Shootable
+  - EnemyVision
   - 
   - 
   - 
@@ -37,8 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Ground
   m_SortingLayers:
   - name: Default
     uniqueID: 0

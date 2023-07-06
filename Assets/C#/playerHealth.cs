@@ -9,26 +9,55 @@ public class playerHealth : MonoBehaviour
     public float fullHealth;
     float currentHealth;
 
+    public GameObject playerDeathEffects;
     public Slider playerHealthSlider;
 
-    // Start is called before the first frame update
-    void Start()
+    // HUD
+    public Slider playerhealthSlider;
+    public Image damageScreen;
+    Color flashColor = new Color(255f, 255f, 255f, 1f);
+    Color blankColor = new Color(0, 0, 0, 0);
+    float flashSpeed = 5f;
+    bool damaged = false;
+    public Text endGameText;
+    public restartGame theGameController;
+
+    AudioSource playerAS;
+
+
+    // Use this for initalization
+    void Awake ()
     {
         currentHealth = fullHealth;
         playerHealthSlider.maxValue = fullHealth;
         playerHealthSlider.value = currentHealth;
+
+        playerAS = GetComponent < AudioSource > ();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        //are we hurt?
+        if (damaged)
+        {
+            damageScreen.color = flashColor;
+        }
+        else {
+            damageScreen.color = blankColor;
+        }
+        damaged = false;           
     }
 
     public void addDamage(float damage)
     {
         currentHealth -= damage;
         playerHealthSlider.value = currentHealth;
+        damaged = true;
+
+        playerAS.Play();
+
         if(currentHealth <= 0)
         {
             makeDead();
@@ -44,6 +73,11 @@ public class playerHealth : MonoBehaviour
 
     public void makeDead()
     {
-            Destroy(gameObject);
+        Instantiate(playerDeathEffects, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+        damageScreen.color = flashColor;
+        Destroy(gameObject);
+        Animator endGameAnim = endGameText.GetComponent<Animator>();
+        endGameAnim.SetTrigger("endGame");
+        theGameController.restartTheGame();
     }
 }

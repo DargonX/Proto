@@ -2,26 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController: MonoBehaviour
+public class playerController : MonoBehaviour
 {
 
 
     //movement variables
-    public float runSpeed;
-    public float walkSpeed;
+    [Header("Movement Settings")]
+    [SerializeField] float runSpeed;
+    [SerializeField] float walkSpeed;
+    bool running;
 
     Rigidbody myRB;
     Animator myAnim;
+    public Collider other;
 
     bool facingRight;
 
     //for jumping
+    [Header("Jump Settings")]
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float jumpHeight;
+    [SerializeField] float groundCheckRadius = 0.05f;
     bool grounded = false;
     Collider[] groundCollisions;
-    float groundCheckRadius = 0.05f;
-    public LayerMask groundLayer;
-    public Transform groundCheck;
-    public float jumpHeight;
 
     // Start is called before the first frame update
     void Start()
@@ -42,26 +46,45 @@ public class playerController: MonoBehaviour
 
     void FixedUpdate()
     {
-        if(grounded && Input.GetAxis("Jump") > 0)
+
+        running = false;
+
+        if (grounded && Input.GetAxis("Jump") > 0)
         {
             grounded = false;
-            myAnim.SetBool("grounded", false);
+            myAnim.SetBool("grounded", grounded);
+            myRB.velocity = new Vector3 (myRB.velocity.x, 0, 0); 
             myRB.AddForce(new Vector3(0, jumpHeight, 0));
         }
-
+        
         groundCollisions = Physics.OverlapSphere(groundCheck.position, groundCheckRadius, groundLayer);
-        if (groundCollisions.Length > 0) 
+        if (groundCollisions.Length > 0 )
         {
             grounded = true;
-                }
+        }
         else grounded = false;
 
         myAnim.SetBool("grounded", grounded);
 
+        //jumping
+        myAnim.SetFloat("verticalSpeed", myRB.velocity.y);
+
         float move = Input.GetAxis("Horizontal");
         myAnim.SetFloat("speed", Mathf.Abs(move));
 
-        myRB.velocity = new Vector3(move * runSpeed, myRB.velocity.y, 0);
+        float sneaking = Input.GetAxisRaw("Fire3");
+
+        float firing = Input.GetAxisRaw("Fire1");
+
+        if((sneaking > 0 || firing > 0) && grounded)
+        {
+            myRB.velocity = new Vector3(move * walkSpeed, myRB.velocity.y, 0);
+        }
+        else
+        {
+            myRB.velocity = new Vector3(move * runSpeed, myRB.velocity.y, 0);
+            if(Mathf.Abs(move) > 0) running = true;
+        }
 
         if (move > 0 && !facingRight) Flip();
         else if (move < 0 && facingRight) Flip();
@@ -75,11 +98,16 @@ public class playerController: MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    
+
     public float GetFacing()
     {
         if (facingRight) return 1;
         else return -1;
+    }
+
+    public bool getRunning()
+    {
+        return (running);
     }
 
 }
