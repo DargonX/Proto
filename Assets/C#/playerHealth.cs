@@ -12,8 +12,6 @@ public class playerHealth : MonoBehaviour
     public GameObject playerDeathEffects;
     public Slider playerHealthSlider;
 
-    // HUD
-    public Slider playerhealthSlider;
     public Image damageScreen;
     Color flashColor = new Color(255f, 255f, 255f, 1f);
     Color blankColor = new Color(0, 0, 0, 0);
@@ -37,18 +35,7 @@ public class playerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //are we hurt?
-        if (damaged)
-        {
-            damageScreen.color = flashColor;
-        }
-        else {
-            damageScreen.color = blankColor;
-        }
-        damaged = false;           
-    }
+
 
     public void addDamage(float damage)
     {

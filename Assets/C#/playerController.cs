@@ -14,7 +14,6 @@ public class playerController : MonoBehaviour
 
     Rigidbody myRB;
     Animator myAnim;
-    public Collider other;
 
     bool facingRight;
 
