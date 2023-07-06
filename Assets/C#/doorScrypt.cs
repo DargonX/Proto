@@ -27,17 +27,11 @@ public class doorScrypt: MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && !firstTrigger)
+        if (other.tag == "Player" && !firstTrigger)
         {
             if (!resetable) firstTrigger = true;
             doorAnim.SetTrigger("setTrigger");
             open = !open;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    
     }
 }
