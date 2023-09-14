@@ -133,8 +133,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MoveForce>k__BackingField: 750
-  <Idle>k__BackingField: {fileID: 11400000, guid: c74d66bc8090d6f4c90497b9a45ce92e,
+  <Idle>k__BackingField: {fileID: 11400000, guid: 8e18be9eae902594e8b7d91b74a0c7b7,
     type: 2}
+  <Walk>k__BackingField: {fileID: 11400000, guid: 6b1405633def67e4ea96bb2d7156587c,
+    type: 2}
+  <Use>k__BackingField: {fileID: 11400000, guid: 262a6f3c68fadc145831fa2d38a01b23,
+    type: 2}
+  <StateAnimation>k__BackingField:
+    m_keys:
+    - {fileID: 11400000, guid: 8e18be9eae902594e8b7d91b74a0c7b7, type: 2}
+    - {fileID: 11400000, guid: 6b1405633def67e4ea96bb2d7156587c, type: 2}
+    - {fileID: 11400000, guid: 262a6f3c68fadc145831fa2d38a01b23, type: 2}
+    m_values:
+    - {fileID: 11400000, guid: c74d66bc8090d6f4c90497b9a45ce92e, type: 2}
+    - {fileID: 11400000, guid: aaacc380cf3f27e48ad30c552fbdeaae, type: 2}
+    - {fileID: 11400000, guid: 6afb0479c001bcc4c8df309f8068b663, type: 2}
 --- !u!95 &-2768677743261183964
 Animator:
   serializedVersion: 5

@@ -7,12 +7,16 @@ public class Playercontroller : MonoBehaviour
 {
 
     [field: SerializeField] public float MoveForce { get; private set; }
-    [field: SerializeField] public DirectionalAnimationSet Idle { get; private set; }
+    [field: SerializeField] public CHaracterState Idle { get; private set; }
+    [field: SerializeField] public CHaracterState Walk { get; private set; }
+    [field: SerializeField] public CHaracterState Use { get; private set; }
+
+    [field: SerializeField] public StateAnimationDictionary StateAnimation { get; private set; }
 
     private Vector2 _axisInput = Vector2.zero;
     private Rigidbody2D _rb;
     private Animator _animator;
-    private DirectionalAnimationSet _currentSet;
+    private CHaracterState _currentState;
     private AnimationClip _currentClip;
     private Vector2 _facingDir;
 
@@ -20,12 +24,12 @@ public class Playercontroller : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _currentSet = Idle;
+        _currentState = Idle;
     }
 
     private void Update()
     {
-        AnimationClip expectedClip = _currentSet.GetFcingClip(_facingDir);
+        AnimationClip expectedClip = StateAnimation.GetFacingClipFromState(_currentState, _facingDir);
 
         if(_currentClip == null || _currentClip != expectedClip)
         {

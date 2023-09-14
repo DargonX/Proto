@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82382871690a55e4892f042cc67ec466, type: 3}
+  m_Name: DirectionalAnimationSet_walk
+  m_EditorClassIdentifier: 
+  <Up>k__BackingField: {fileID: 7400000, guid: d689549c27be1654c87f54306b08710c, type: 2}
+  <Down>k__BackingField: {fileID: 7400000, guid: 487966869d0b0b245a131d6b9ce6cb1e,
+    type: 2}
+  <Right>k__BackingField: {fileID: 7400000, guid: 8295e3dff16f19c42a1724fdfe8589c5,
+    type: 2}
+  <Left>k__BackingField: {fileID: 7400000, guid: c217aa4b6c2cae844ac5492274f176da,
+    type: 2}
