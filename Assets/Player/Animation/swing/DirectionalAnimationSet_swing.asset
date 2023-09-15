@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82382871690a55e4892f042cc67ec466, type: 3}
   m_Name: DirectionalAnimationSet_swing
   m_EditorClassIdentifier: 
-  <Up>k__BackingField: {fileID: 0}
-  <Down>k__BackingField: {fileID: 0}
-  <Right>k__BackingField: {fileID: 0}
-  <Left>k__BackingField: {fileID: 0}
+  <Up>k__BackingField: {fileID: 7400000, guid: 4217ec06636031f43a8a67650b64997d, type: 2}
+  <Down>k__BackingField: {fileID: 7400000, guid: 545a685ca4743cc43af8a3d50c8290d7,
+    type: 2}
+  <Right>k__BackingField: {fileID: 7400000, guid: 967514d7bad0a804d804271eee9e1665,
+    type: 2}
+  <Left>k__BackingField: {fileID: 7400000, guid: 6760105267ff67949a934bb3ac933c71,
+    type: 2}

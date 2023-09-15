@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - 
@@ -22,12 +22,12 @@ TagManager:
   - 
   - 
   - 
+  - Grass
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
+  - 
+  - 
   - 
   - 
   - 
@@ -38,15 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Grass
+    uniqueID: 4189426099
     locked: 0
-  - name: Layer 1
+  - name: Water
     uniqueID: 2425651459
     locked: 0
-  - name: Layer 2
+  - name: Wall
     uniqueID: 4250941897
     locked: 0
-  - name: Layer 3
-    uniqueID: 4189426099
+  - name: Default
+    uniqueID: 0
     locked: 0
