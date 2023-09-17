@@ -6,6 +6,7 @@ public class Harvestable : MonoBehaviour
 {
     [field: SerializeField] public int ResourceCount { get; private set; }
     [field: SerializeField] public ParticleSystem ResourceEmitPS { get; private set; }
+    [field: SerializeField] public GameObject EffectOnDestroyPrefab { get; private set; }
     private int _amountHarvested = 0;
 
     public void Harvest(int amount)
@@ -20,6 +21,11 @@ public class Harvestable : MonoBehaviour
 
         if(_amountHarvested >= ResourceCount)
         {
+            if (EffectOnDestroyPrefab)
+            {
+                Instantiate(EffectOnDestroyPrefab, transform.position, Quaternion.identity);
+            }
+
             Destroy(gameObject);
         }
     }
