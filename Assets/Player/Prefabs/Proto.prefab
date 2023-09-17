@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -2768677743261183964}
   - component: {fileID: 8075752666119300529}
   - component: {fileID: 6959521896638659637}
+  - component: {fileID: 4858068710793117346}
+  - component: {fileID: 7970741819906376163}
   m_Layer: 0
   m_Name: Proto
   m_TagString: Untagged
@@ -219,6 +221,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.61, y: 0.43}
   m_EdgeRadius: 0
+--- !u!114 &4858068710793117346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3469228248174928300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fff04eefb879948b3c07cae1040533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Resources>k__BackingField:
+    m_keys:
+    - {fileID: 11400000, guid: b274b9746f36f34469578eb22e42a470, type: 2}
+    m_values: 05000000
+--- !u!114 &7970741819906376163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3469228248174928300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a159a4b4719ce5d44bce3565cad90d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Inventory>k__BackingField: {fileID: 4858068710793117346}
 --- !u!1 &5690089476030656826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5124,7 +5155,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7539099136310920429}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -5155,3 +5186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b660469e7c2f1ba44a71523327642215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <MinHarvest>k__BackingField: 1
+  <MaxHarvest>k__BackingField: 3

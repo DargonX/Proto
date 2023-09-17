@@ -181,7 +181,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -244,7 +244,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4844,6 +4844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a7cc93fbff2a04e896f3270d2e9a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectPrefub>k__BackingField: {fileID: 1628130540225790581, guid: 073f187fc629fb348a6460f75d060d00,
+    type: 3}
 --- !u!1 &1962403915294885471
 GameObject:
   m_ObjectHideFlags: 0
