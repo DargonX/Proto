@@ -5313,5 +5313,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b660469e7c2f1ba44a71523327642215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MinHarvest>k__BackingField: 1
-  <MaxHarvest>k__BackingField: 3
+  _tool: {fileID: 11400000, guid: 9546602480976374098e315be941a965, type: 2}
