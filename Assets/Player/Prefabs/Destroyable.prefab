@@ -4860,7 +4860,7 @@ GameObject:
   - component: {fileID: 3318925382217610938}
   - component: {fileID: 5837555583327630859}
   m_Layer: 0
-  m_Name: Inside
+  m_Name: ResourceNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

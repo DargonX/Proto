@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4113364478242050632}
   - component: {fileID: 3596104019653457887}
   m_Layer: 0
-  m_Name: Recource_f_b
+  m_Name: Recource_Grey_Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
