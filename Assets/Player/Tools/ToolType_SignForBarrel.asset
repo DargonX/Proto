@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d35491de15a644a8fc57f25622414f, type: 3}
   m_Name: ToolType_SignForBarrel
   m_EditorClassIdentifier: 
-  <Display>k__BackingField: 
-  <Icon>k__BackingField: {fileID: 0}
-  <Description>k__BackingField: 
+  <Display>k__BackingField: Sign For Barrel
+  <Icon>k__BackingField: {fileID: 21300086, guid: 29c9cded5e558164aaf8c9bf08aa1510,
+    type: 3}
+  <Description>k__BackingField: Sign For Barrel

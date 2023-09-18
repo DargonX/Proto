@@ -10,6 +10,7 @@ using UnityEngine;
 public class Tool: ScriptableObject
 {
     [field: SerializeField] public string DisplayName { get; private set; }
+    [field: SerializeField] public Sprite Sprite { get; private set; }
     [field: SerializeField] public Sprite Icon { get; private set; }
     [field: SerializeField] public string Description { get; private set; }
     [field: SerializeField] public ToolType Type { get; private set; }

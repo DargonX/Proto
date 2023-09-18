@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Tool_ForBarrel
   m_EditorClassIdentifier: 
   <DisplayName>k__BackingField: Tool For Barrel
-  <Icon>k__BackingField: {fileID: 0}
-  <Description>k__BackingField: 
-  <Type>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300086, guid: 29c9cded5e558164aaf8c9bf08aa1510,
+    type: 3}
+  <Icon>k__BackingField: {fileID: 21300086, guid: 29c9cded5e558164aaf8c9bf08aa1510,
+    type: 3}
+  <Description>k__BackingField: Tool For Barrel
+  <Type>k__BackingField: {fileID: 11400000, guid: 076a3b621bbd413429159244455490ee,
+    type: 2}
   <MinHarvest>k__BackingField: 1
   <MaxHarvest>k__BackingField: 3

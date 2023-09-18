@@ -10,6 +10,8 @@ public class PickupGravity : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _nearbyResources.RemoveAll(pickup => pickup == null);
+
         foreach (ResoucePickUp pickup in _nearbyResources)
         {
             Vector2 directionToCenter = (transform.position - pickup.transform.position).normalized;

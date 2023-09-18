@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52e99369c89c374b87fcf37587ad963, type: 3}
   m_Name: Tool_ForPillar
   m_EditorClassIdentifier: 
-  <DisplayName>k__BackingField: 
-  <Icon>k__BackingField: {fileID: 0}
-  <Description>k__BackingField: 
-  <Type>k__BackingField: {fileID: 0}
+  <DisplayName>k__BackingField: Tool For Pillar
+  <Sprite>k__BackingField: {fileID: 21300088, guid: 29c9cded5e558164aaf8c9bf08aa1510,
+    type: 3}
+  <Icon>k__BackingField: {fileID: 21300088, guid: 29c9cded5e558164aaf8c9bf08aa1510,
+    type: 3}
+  <Description>k__BackingField: Tool For Pillar
+  <Type>k__BackingField: {fileID: 11400000, guid: 688e062dc4879e44697b1f75b36fff65,
+    type: 2}
   <MinHarvest>k__BackingField: 1
   <MaxHarvest>k__BackingField: 3
